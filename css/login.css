@@ -1,0 +1,393 @@
+html,body{
+  background-image: url(/pensionados/imagenes/marca_de_agua.PNG);
+  background-repeat:no-repeat; 
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+html {
+  
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.media-object{
+  height: 40px;
+}
+h1 {
+  text-shadow: #CCC;
+  margin-top:25px;
+}
+h1:hover {
+  color: gray;
+}
+.container{
+  margin: auto;
+  margin-top:30px;
+}
+.card {
+  margin: 0px 75px 0px 75px;
+}
+#icon-logo {
+      height: 128px;
+      width: 128px;
+}
+.card-body{
+  background: rgb(147,255,);
+  border-radius: 20px;
+  padding: 25px 55px 25px 55px;
+}
+.btn {
+  justify-content: center;
+}
+label{
+  font-weight: bold;
+}
+img {
+  margin-left: 10px;
+}
+.form-group
+{
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+}
+
+footer{
+  background-color: gray;
+  
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 60px;
+   text-align: center;
+   color: #CCC;
+}
+
+footer p {
+   padding: 1px;
+   margin: 0px;
+   line-height: 100%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 575px) {
+  .navbar {
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+  }
+  /* .navbar-toggler.hidden, .navbar-toggler-icon.hidden {
+    display: none;
+    visibility: visible;
+  } */
+  .logo1 {
+    width: 45px;
+    height: 45px;
+  }
+  .logo2{
+    align-content: flex-start;
+    width: 200px;
+    height: 50px;
+  }
+  .logo3{
+    align-content: flex-start;
+    width: 50px;
+    height: 50px;
+  }
+  #icon-logo {
+    height: 64px;
+    width: 64px;
+    margin-top: 0px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .card {
+    width: 70%;
+    height: 95%;
+  }
+  .card-body {
+    width: 100%;
+    height: 80%;
+  }
+  .form-group {
+    margin: 0% 5px 0% 4px;
+  }
+  label {
+    font-size: 12px;
+  }
+  input {
+   width: 200px;
+  }
+  
+  p {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+ .form-inline{
+    width: 32px;
+    height: 32px;
+  }
+  footer > p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .navbar {
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+  }
+ 
+  .logo1 {
+    width: 50px;
+    height: 50px;
+  }
+  .logo2{
+    align-content: flex-start;
+    width: 250px;
+    height: 60px;
+  }
+  .logo3{
+    visibility: collapse; 
+    width: 50px;
+    height: 50px;
+  }
+  #icon-logo {
+    height: 64px;
+    width: 64px;
+    margin-top: 0px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .card {
+    width: 85%;
+    height: 100%;
+    margin: 0px 0px 0px 50px;
+  }
+  .card-body {
+    width: 100%;
+    height: 80%;
+  }
+  .form-group {
+    margin: 0% 5px 0% 4px;
+  }
+  label {
+    font-size: 14px;
+  }
+  input {
+   width: 200px;
+   height: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+ .form-inline{
+    width: 48px;
+    height: 48px;
+  }
+  footer > p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+  }
+ 
+  .logo1 {
+    width: 50px;
+    height: 50px;
+  }
+  .logo2{
+    align-content: flex-start;
+    width: 250px;
+    height: 60px;
+  }
+  .logo3{
+    width: 160px;
+    height: 50px;
+  }
+  #icon-logo {
+    height: 96px;
+    width: 96px;
+    margin-top: 0px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .card {
+    width: 85%;
+    height: 100%;
+    margin: 0px 0px 0px 50px;
+  }
+  .card-body {
+    width: 100%;
+    height: 80%;
+  }
+  .form-group {
+    margin: 0% 5px 0% 4px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  input {
+   width: 200px;
+   height: 40px;
+   border-radius: 10px;
+  }
+  footer > p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  body {
+    overflow: scroll;
+  }
+  .navbar {
+    width: 100%;
+    height: 12%;
+    justify-content: flex-start;
+  }
+ 
+  .logo1 {
+    width: 75px;
+    height: 75px;
+  }
+  .logo2{
+    align-content: flex-start;
+    width: 250px;
+    height: 100px;
+  }
+  .logo3{
+    width: 300px;
+    height: 80px;
+    align-content: flex-end;
+  }
+  #icon-logo {
+    height: 148px;
+    width: 148px;
+    margin-top: 0px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .card {
+    width: 85%;
+    height: 100%;
+    margin: 0px 0px 0px 50px;
+  }
+  .card-body {
+    width: 100%;
+    height: 80%;
+  }
+  .form-group {
+    margin: 0% 5px 0% 4px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  input {
+   width: 200px;
+   height: 50px;
+   border-radius: 10px;
+  }
+  footer > p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1441px) {
+  
+  .navbar {
+    width: 100%;
+    height: 12%;
+    justify-content: flex-start;
+  }
+ 
+  .logo1 {
+    width: 75px;
+    height: 65px;
+  }
+  .logo2{
+    align-content: flex-start;
+    width: 280px;
+    height: 60px;
+  }
+  .logo3{
+    width: 280px;
+    height: 60px;
+    align-content: flex-end;
+  }
+  #icon-logo {
+    height: 130px;
+    width: 130px;
+    margin-top: 0px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .row {
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 85%;
+    height: 95%;
+    margin: 0px 0px 0px 50px;
+    padding: 5px 15px 5px 15px;
+  }
+  .card-body {
+    width: 100%;
+    height: 90%;
+  }
+  .form-group {
+    margin: 0% 5px 0% 4px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  .btn-secondary {
+    justify-content: center;
+  }
+  input {
+   width: 200px;
+   height: 40px;
+   border-radius: 10px;
+  }
+  footer > p {
+    font-size: 18px;
+  }
+}
