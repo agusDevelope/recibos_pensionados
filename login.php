@@ -35,7 +35,10 @@ if (isset($_SESSION['user']) && isset($_SESSION['segusoc']))
 <!-- Inicia Nav -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background:#1BB600;">
     <a class="navbar-brand"> <img src="./imagenes/cap.png" class="img-fluid logo1" ></a>
-    <a class="navbar-brand"><img src="./imagenes/Logo_Dependencia.png" class="img-fluid logo2"></a>
+      <div class="form-group">
+          <a class="title part"><h4>Caja de Previsión de la Policía</h4></a> 
+        <a class=" title"><h4>Preventiva de la Ciudad de México</h4></a>
+      </div>
       <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon d-none"></span>
       </button>
@@ -71,7 +74,7 @@ if (isset($_SESSION['user']) && isset($_SESSION['segusoc']))
 <div class="container ">
   <div class="row">
     <div class="offset-md-3 col-md-6 offset-md-3">
-      <div class="card">
+
           <div class="card-body">
             <form method="post">
               <h1><p class="text-center"><img src="./imagenes/useric.png" alt="user" id="icon-logo"></p></h1>
@@ -95,7 +98,6 @@ if (isset($_SESSION['user']) && isset($_SESSION['segusoc']))
             
 
           </div>
-      </div>
     </div>
   </div> 
 </div>
@@ -148,4 +150,4 @@ $(document).ready(function(){
 }); //ready(function
 </script>
 
-
+Under

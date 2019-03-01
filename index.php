@@ -1,5 +1,15 @@
+<?php
+session_start();
+if (!isset($_SESSION['user']) && !isset($_SESSION['segusoc']))
+{   
+    session_destroy();
+    header("location:login.php");
+//jquery-1.12.3.min.js
+}
+include "dataUser.php";
+//print_r($timusr);
 
-
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,7 +55,10 @@
       <!-- Inicia Nav -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background:#1BB600;">
     <a class="navbar-brand"> <img src="./imagenes/cap.png" class="img-fluid logo1" ></a>
-    <a class="navbar-brand"><img src="./imagenes/Logo_Dependencia.png" class="img-fluid logo2"></a>
+        <div class="form-group">
+            <a class="title part"><h4>Caja de Previsión de la Policía</h4></a> 
+        <a class=" title"><h4>Preventiva de la Ciudad de México</h4></a>
+        </div>
       <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon d-none"></span>
       </button>
@@ -66,7 +79,7 @@
           <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
           <a><img src="./imagenes/Logo_CDMX.png" class="media-object img-fluid logo3 d-block"></a>
           <?php
-            session_start();
+            
             if (isset($_POST['user']) || isset($_POST['segusoc']))
             {
                 header("location:login.php");
@@ -79,26 +92,59 @@
 </nav>
 <!-- Termina Nav -->
 <!-- Año del ejercicio de recibos -->
- 
- <div class="container">
-     <div class="row mt-5">
-         <div class="offset-3 col-md-6 offset-3">
-         <?php
-         $_ejercicio = $_SESSION["ejercicio"];     
-         $_cadenames = $_SESSION["cadenames"];     
-         echo "<h1 class='text-center'> Recibos del ejercicio: " . $_ejercicio."</h1>";
-         ?>
-         <form action="index.php" method="post"> 
-            <div class="dropdown">
-                <select class="btn btn-secondary dropdown-toggle btn-block" id="cboejercicio" name="cboejercicio">
-                    <option value="">Selecciona el ejercicio</option>    
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                </select>
+
+
+
+ <div class="container py-3">
+    <div class="row mt-5 ">
+            <div class="col-md-6">
+                <div class="row">
+                <div class="col-md-3">
+                <img src="./imagenes/usr.png" class="w-20">
+                </div>
+                    <?php 
+                    echo "<div class='col-md-9 px-3'>";
+                    echo "<form class='info-user'>";
+                    echo "<div class='form-group-row'>";
+                    echo "<p>"."Nombre: ".$timusr["nombre"]."</p>";
+                    echo "</div>";
+                    echo "<div class='form-group-row'>";
+                    echo "<p>"."NSS: ".$timusr["nss"]."</p>";
+                    echo "</div>";
+                    echo "<div class='form-group-row'>";
+                    echo "<p>"."CURP: ".$timusr["curp"]."</p>";
+                    echo "</div>";
+                    echo "<div class='form-group-row'>";
+                    echo "<p>"."RFC: ".$timusr["rfc"]."</p>";
+                    echo "</div>";
+                    echo "<div class='form-group-row'>";
+                    echo "<p>"."N° Pensionado: ".$timusr["pensionado"]."</p>";
+                    echo "</div>";
+                    echo "</form>";
+                    echo "</div>";
+                    ?>
+                </div>
             </div>
-            </form>
-         </div>
+            <div class="col-md-6">
+
+                <?php
+                 $_ejercicio = $_SESSION["ejercicio"];     
+                 $_cadenames = $_SESSION["cadenames"];     
+
+
+                 echo "<h1 class='text-center'> Recibos del ejercicio: " . $_ejercicio."</h1>";
+                 ?>
+                 <form action="index.php" method="post"> 
+                    <div class="dropdown">
+                        <select class="btn btn-secondary dropdown-toggle btn-block" id="cboejercicio" name="cboejercicio">
+                            <option value="">Selecciona el ejercicio</option>    
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
      </div>
  </div>
 
@@ -108,15 +154,6 @@
 <!-- Tabla de recibos -->
 <form action="#" method="post"> 
 <table class="table table-striped table-responsive-md btn-table" disabled="disabled">
-
-<thead>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-</thead>
 
 <tbody>
   <tr>
@@ -297,28 +334,6 @@
 
 </table>
 </form>
-<!-- <form action="">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card-header">Enero</div>  
-                <div class="card-body"><img src="./imagenes/recibomd.png" alt="Enero"></div>
-            
-        </div>
-        <div class="col-md-4">
-            <div class="card-header">Febrero</div>  
-                <div class="card-body"><img src="./imagenes/recibomd.png" alt="Enero"></div>
-            
-        </div>
-        <div class="col-md-4">
-            <div class="card-header">Marzo</div>  
-                <div class="card-body"><img src="./imagenes/recibomd.png" alt="Enero"></div>
-            
-        </div>
-    </div>
-</div>
-
-</form> -->
 
 </body>
 </html>
